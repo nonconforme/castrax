@@ -58,7 +58,7 @@
           // display the message from the sender
           displayText(event.data);
 
-          game.events.emit('keyup_' + event.data);
+          //game.scene.scenes[0].emit('keyup_' + event.data);
 
           // inform all senders on the CastMessageBus of the incoming message event
           // sender message listener will be invoked
