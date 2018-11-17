@@ -14,12 +14,12 @@
   </head>
   <body>
     <script type="text/javascript">
+      const game = new Phaser.Game(config);
       window.onload = function() {
         cast.receiver.logger.setLevelValue(0);
         window.castReceiverManager = cast.receiver.CastReceiverManager.getInstance();
         console.log('Starting Receiver Manager');
 
-        const game = new Phaser.Game(config);
 
           // handler for the 'ready' event
         castReceiverManager.onReady = function(event) {
