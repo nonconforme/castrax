@@ -14,9 +14,11 @@ class Field extends Phaser.Scene {
            this.image.x +=10;
         }, this);
 
-        this.input.keyboard.on('keyup_P', function () {
-            var pi = this.physics.add.image(this.image.x, this.image.y, 'Bullet')
-            pi.setVelocity(Phaser.Math.RND.integerInRange(-100,100), -300);
-        }, this);
+        this.input.keyboard.on('keyup_P', this.fire, this);
+    }
+
+    fire() {
+        var pi = this.physics.add.image(this.image.x, this.image.y, 'Bullet')
+        pi.setVelocity(Phaser.Math.RND.integerInRange(-100,100), -300);
     }
 }
